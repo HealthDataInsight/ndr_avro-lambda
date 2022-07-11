@@ -1,0 +1,21 @@
+{
+  "Records": [
+      {
+          "eventVersion": "2.1",
+          "eventSource": "aws:s3",
+          "awsRegion": "eu-west-2",
+          "s3": {
+              "bucket": {
+                  "name": "ruby-etl-lambda-inbox",
+                  "arn": "arn:aws:s3:::ruby-etl-lambda-inbox"
+              },
+              "object": {
+                  "key": "fake_dids_10.csv",
+                  "size": 1403,
+                  "eTag": "0749aa19fe6c86045191a5e05ed5a2cf",
+                  "sequencer": "0062CC825ED7388338"
+              }
+          }
+      }
+  ]
+}

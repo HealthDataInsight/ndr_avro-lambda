@@ -1,0 +1,4 @@
+*.avro
+.bundle/
+deploy.zip
+vendor/
