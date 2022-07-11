@@ -71,6 +71,9 @@ class LambdaFunction
       generator.output_files.each do |output_file_hash|
         object_hash = s3_wrapper.put_object(output_bucket, output_file_hash[:path])
         results << object_hash.merge(total_rows: output_file_hash[:total_rows])
+
+        object_hash = s3_wrapper.put_object(output_bucket, output_file_hash[:schema])
+        results << object_hash
       end
 
       t3 = Time.current
