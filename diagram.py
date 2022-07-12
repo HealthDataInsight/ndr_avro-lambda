@@ -9,12 +9,12 @@ graph_attr = {
 }
 
 with Diagram("NDRImport Avro Lambda", show=False, graph_attr=graph_attr):
-    avroLambda = Lambda("ETL")
+    avroLambda = Lambda("ETL engine")
     
-    S3("inbox") \
+    S3("Inbox") \
         >> Edge(label="Create trigger") \
         >> avroLambda
 
     avroLambda >> Edge(label="HTTPS request") << InternetAlt2("Transformation markup")
 
-    avroLambda >> S3("outbox")
+    avroLambda >> S3("Outbox")
