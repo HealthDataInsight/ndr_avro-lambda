@@ -6,11 +6,30 @@ This is an image-based AWS Lambda, using [ndr_avro](https://github.com/timgentry
 
 ## Installation
 
+You need the AWS CLI tools installed and configured to install the lambda.
+
 To make the AWS Linux docker container containing the Avro lambda, run:
 
     $ make image
 
-## Usage
+Before you push to the Elastic Container Registry (ECR) you will need to log in, use:
+
+    $ make docker-login
+
+To push the image to ECR, use:
+
+    $ make docker-tagpush
+
+You will then need to:
+
+    * create a new image-based lambda using the latest image
+    * trigger the lambda from an "inbox" S3 bucket create object event
+    * Add MAPPING_URL environment variable for the location of the mapping file
+    * Add OUTPUT_BUCKET_NAME environment variable for where you want to save the Avro files
+
+In testing, I gave it 1024 MB of memory (although it used less than half of that) and set a timeout of 5 minutes.
+
+## Local Usage
 
 To convert the sample collection CSV file `fake_dids_10.csv` to Avro format, using the `dids.yml` mapping file, run:
 

@@ -41,7 +41,7 @@ class LambdaFunction
     # input_bucket = s3_event_hash['bucket']['arn']
     object_key = s3_event_hash['object']['key']
 
-    output_bucket = ENV['OUTPUT_BUCKET_ARN']
+    output_bucket = ENV['OUTPUT_BUCKET_NAME']
     mappings = URI.parse(ENV['MAPPING_URL']).read
     # logger.info('## MAPPING_URL')
     # logger.info(ENV['MAPPING_URL'])
