@@ -24,6 +24,7 @@ RUN yum install -y clang make git-core && \
 COPY filesystem_paths.yml .
 COPY lambda_function.rb .
 COPY safe_dir.rb .
+COPY standard_mappings.yml .
 
 CMD ["lambda_function.LambdaFunction.process"]
 # ENTRYPOINT "/bin/bash"

@@ -16,6 +16,10 @@ require_relative 'safe_dir'
 # Configure SafePath
 SafePath.configure!(File.join('.', 'filesystem_paths.yml'))
 
+# Configure NdrImport::StandardMappings
+mappings_path = SafePath.new('root').join('standard_mappings.yml')
+NdrImport::StandardMappings.mappings = YAML.load_file(mappings_path)
+
 # Main class containing the entry point class method LambdaFunction.process
 class LambdaFunction
   VERSION = '0.1.0'.freeze
