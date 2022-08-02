@@ -2,7 +2,9 @@
 
 This is an image-based AWS Lambda, using [ndr_avro](https://github.com/timgentry/ndr_avro) to generate Avro files from [numerous filetypes](https://github.com/publichealthengland/ndr_import#ndrimport---).
 
-![Archtecture diagram showing the create event from an inbox S3 bucket triggering a lambda to get the transformation and save the output in an outbox S3 bucket](ndrimport_avro_lambda.png)
+<p align="center">
+    <img src="ndrimport_avro_lambda.png" alt="Archtecture diagram showing the create event from an inbox S3 bucket triggering a lambda to get the transformation and save the output in an outbox S3 bucket" width="50%" />
+</p>
 
 ## Installation
 
