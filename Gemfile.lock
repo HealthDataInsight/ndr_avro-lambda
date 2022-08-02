@@ -1,20 +1,21 @@
 GIT
   remote: https://github.com/timgentry/ndr_avro
-  revision: 0f233e67b22a2ee74dda717d9b59dce569228305
+  revision: d664001cfa801fb4c441ca894175a857a3b23362
   branch: main
+  tag: v1.0.0-rc.1
   specs:
-    ndr_avro (0.1.0)
+    ndr_avro (1.0.0.pre.rc.1)
       avro (~> 1.11.0)
       ndr_import
 
 GIT
   remote: https://github.com/timgentry/ndr_import
-  revision: 8c43a40664fb5e1edfe9b6cf98b6e30f827a0942
+  revision: 489cff1fa178ba28db345f21facce021202cdd91
   branch: feature/filename_column
   specs:
-    ndr_import (10.1.1)
+    ndr_import (10.1.2)
       activemodel
-      activesupport (>= 5.0, < 7)
+      activesupport (>= 5.2, < 7)
       docx (~> 0.3)
       msworddoc-extractor (= 0.2.0)
       ndr_support (>= 5.3.2, < 6)
@@ -31,42 +32,42 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.1.0)
-    activemodel (6.1.6)
-      activesupport (= 6.1.6)
-    activerecord (6.1.6)
-      activemodel (= 6.1.6)
-      activesupport (= 6.1.6)
-    activesupport (6.1.6)
+    activemodel (6.1.6.1)
+      activesupport (= 6.1.6.1)
+    activerecord (6.1.6.1)
+      activemodel (= 6.1.6.1)
+      activesupport (= 6.1.6.1)
+    activesupport (6.1.6.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
     afm (0.2.2)
-    avro (1.11.0)
+    avro (1.11.1)
       multi_json (~> 1.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.603.0)
-    aws-sdk-core (3.131.2)
+    aws-partitions (1.614.0)
+    aws-sdk-core (3.131.5)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.57.0)
+    aws-sdk-kms (1.58.0)
       aws-sdk-core (~> 3, >= 3.127.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.114.0)
       aws-sdk-core (~> 3, >= 3.127.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
-    aws-sigv4 (1.5.0)
+    aws-sigv4 (1.5.1)
       aws-eventstream (~> 1, >= 1.0.2)
     concurrent-ruby (1.1.10)
     docx (0.7.0)
       nokogiri (~> 1.13, >= 1.13.0)
       rubyzip (~> 2.0)
     hashery (2.1.2)
-    i18n (1.10.0)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jmespath (1.6.1)
     minitest (5.16.2)
@@ -76,14 +77,14 @@ GEM
     ndr_support (5.9.0)
       activerecord (>= 5.2.0, < 7)
       activesupport (>= 5.2.0, < 7)
-    nokogiri (1.13.6-x86_64-darwin)
+    nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.6-x86_64-linux)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     ooxml_decrypt (1.0.0)
       nokogiri (~> 1.10)
       ruby-ole (~> 1.2)
-    pdf-reader (2.10.0)
+    pdf-reader (2.9.2)
       Ascii85 (~> 1.0)
       afm (~> 0.2.1)
       hashery (~> 2.0)
@@ -104,18 +105,20 @@ GEM
     spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
     ttfunk (1.7.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     zeitwerk (2.6.0)
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   aws-sdk-s3 (~> 1)
   ndr_avro!
   ndr_import!
+  pdf-reader (!= 2.10.0)
 
 BUNDLED WITH
    2.3.17
